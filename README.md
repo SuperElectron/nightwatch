@@ -226,7 +226,8 @@ $ ./node_modules/.bin/nightwatch node_modules/nightwatch/examples/tests/ecosia.j
 ---
 
 # CONTRIBUTING TO THE README.md
-- here are some things that can help. Feel free to add points here if you think improvements can be made and push your suggestions to [insert github url].
+- here are some things that can help. Feel free to add points here if you think improvements can be made and push your suggestions to [github](https://github.com/SuperElectron/nightwatch).
+
 
 1. configuration using docker-compose.yml in your project
 2. running nightwatch tests locally for your project in the docker container
