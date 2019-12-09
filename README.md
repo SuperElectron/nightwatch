@@ -5,20 +5,10 @@
 
 ## Pulling the Image and Customizing it for Your Project
 - pull the image and build it.
-- this example is for TELUS commerce!
+- this example is for a project named commerce!
 
 ```bash
 $ docker pull superelectron/nightwatch:latest
-$ docker build -t superelectron/nightwatch:latest .
-```
-
-OR
-
-Add the files to .docker/docker-ci-projectName
-- here the projectName is commerce!
-
-```bash
-$ cd commerce/.docker/docker-ci-project-name
 $ docker build -t superelectron/nightwatch:latest .
 ```
 
