@@ -64,7 +64,7 @@ $  docker images
 ```                                      
 | REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
 |------------|:---:|:--------:|:-------:|:----:|
-|git.acromedia.com:4567/commerce/nightwatch| latest | 17ce9d54348b | 33 minutes ago | 1.33GB |
+|git.company-name.com:xxxx/commerce/nightwatch| latest | 17ce9d54348b | 33 minutes ago | 1.33GB |
 
 - run the image so it is a container, and check the container ID so we can ssh into it.
 ```bash
