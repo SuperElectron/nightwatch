@@ -155,16 +155,13 @@ if (!empty($redis_up)) {
 }
 
 
-define('COMMERCE_INSTALL_PATH', '/app');
-define('TELUS_SERVICES_WORKER_PATH', '/app/scripts/worker.php');
-
 // if(!isset($_COOKIE["prov"])) { setcookie("prov", "ON"); $_COOKIE["prov"] = "ON"; }; if(!isset($_COOKIE["lang"])) { setcookie("lang", "en"); $_COOKIE["lang"] = "en"; }; define("SET_DEFAULT_COOKIE_FOR_DEVELOPERS", TRUE);
 if(!isset($_COOKIE["prov"])) { $developerDefaultProvLangCookieExpiry=time()+60*60*24*365; setcookie("prov", "ON", $developerDefaultProvLangCookieExpiry, "/"); $_COOKIE["prov"] = "ON"; }; if(!isset($_COOKIE["lang"])) { setcookie("lang", "en", $developerDefaultProvLangCookieExpiry, "/"); $_COOKIE["lang"] = "en"; }; define("SET_DEFAULT_COOKIE_FOR_DEVELOPERS_V2", TRUE);
 
+define('COMMERCE_INSTALL_PATH', '/app');
+define('SERVICES_WORKER_PATH', '/app/scripts/worker.php');
 
 $settings['trusted_host_patterns'] = [
-  '^commerce.local.telus.com$',
-  '^local\.telus\.com$',
   '^127\.0\.0\.1$',
   '^nginx$',
   '^localhost$'

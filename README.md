@@ -109,11 +109,14 @@ Google Chrome 78.0.3904.108
 ### Modifying your ci.settings.php
 - you can copy/paste contents of your settings.php into ci.settings.php
 - add the following to the end of the ci.settings.php (this is a drupal 7 configuration)
-
+- note that your ```PROJECT_INSTALL_PATH``` may need a customized variable name besides ```COMMERCE_INSTALL_PATH```
+- do define service workers, set the variable name and path to worker as the 2nd define statement
+- ```$settings['trusted_host_patterns']``` can use your customized URL
 ```bash
+define('COMMERCE_INSTALL_PATH', '/app');
+define('SERVICES_WORKER_PATH', '/app/scripts/worker.php');
+
 $settings['trusted_host_patterns'] = [
-  '^commerce.local.webpage.com$',
-  '^local\.webpage\.com$',
   '^127\.0\.0\.1$',
   '^nginx$',
   '^localhost$'
