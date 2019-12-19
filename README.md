@@ -1,6 +1,7 @@
 # NIGHTWATCH FOR GITLAB-CI
 - A basic image that can be used in gitlab-ci to test on your code on localhost while in the runner.
 - This document covers configuration of this image for your project.
+- Dockerhub image: https://hub.docker.com/r/superelectron/nightwatch 
 ---
 
 ## Pulling the Image and Customizing it for Your Project
@@ -226,7 +227,8 @@ $ ./node_modules/.bin/nightwatch node_modules/nightwatch/examples/tests/ecosia.j
 ---
 
 # CONTRIBUTING TO THE README.md
-- here are some things that can help. Feel free to add points here if you think improvements can be made and push your suggestions to [insert github url].
+- here are some things that can help. Feel free to add points here if you think improvements can be made and push your suggestions to [github](https://github.com/SuperElectron/nightwatch).
+
 
 1. configuration using docker-compose.yml in your project
 2. running nightwatch tests locally for your project in the docker container
