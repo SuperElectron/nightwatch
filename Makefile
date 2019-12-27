@@ -34,6 +34,6 @@ push-company:
 	docker push $(IMAGE_NAME) -d $(NS)/$(IMAGE_NAME):$(VERSION)
 
 check-dependencies:
-	docker exec nightwatch sh -c "google-chrome --version"
+	docker exec $(IMAGE_NAME) sh -c "google-chrome --version"
 
 default: build
