@@ -40,6 +40,7 @@ $ docker build -t superelectron/nightwatch:latest .
 
 ```bash
 VERSION = $$(date +%Y-%m-%d)
+COMPANY_REPOSITORY = gitlab-registry-name
 ```
 ---
 
