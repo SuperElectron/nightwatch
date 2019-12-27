@@ -8,26 +8,43 @@ IMAGE_NAME ?= nightwatch
 CONTAINER_NAME ?= nightwatch
 CONTAINER_INSTANCE ?= default
 
-.PHONY: testgo pull build build-company run push push-company check-dependencies
+.PHONY: version 
+.PHONY: pull-latest pull-date 
+.PHONY: build-latest build-date build-company-latest build-company-date
+.PHONY: run-latest run-date
+.PHONY: push-latest push-date push-company-latest push-company-date 
+.PHONY: check-dependencies
 
-testgo:
+version:
 	echo $(VERSION)
 
-pull:
+pull-latest:
 	docker pull $(NS)/$(IMAGE_NAME):latest
+pull-date:
+	docker pull $(NS)/$(IMAGE_NAME):$(VERSION)
 
-build:
+build-latest:
 	docker build -t $(NS)/$(IMAGE_NAME):latest .
-build-company:
+build-date:
+	docker build -t $(NS)/$(IMAGE_NAME):$(VERSION) .
+build-company-latest:
 	docker build -t $(COMPANY_REPOSITORY)/$(IMAGE_NAME):latest .
+build-company-date:
+	docker build -t $(COMPANY_REPOSITORY)/$(IMAGE_NAME):$(VERSION) .
 
-run:
+run-latest:
 	docker run --name $(IMAGE_NAME) -d $(NS)/$(IMAGE_NAME):latest
+run-date:
+	docker run --name $(IMAGE_NAME) -d $(NS)/$(IMAGE_NAME):$(VERSION)
 
-push:
+push-latest:
 	docker push $(NS)/$(IMAGE_NAME):latest
-push-company:
+push-date:
+	docker push $(NS)/$(IMAGE_NAME):$(VERSION)
+push-company-latest:
 	docker push $(COMPANY_REPOSITORY)/$(IMAGE_NAME):latest
+push-company-date:
+	docker push $(COMPANY_REPOSITORY)/$(IMAGE_NAME):$(VERSION)
 
 check-dependencies:
 	docker exec nightwatch sh -c "google-chrome --version"
