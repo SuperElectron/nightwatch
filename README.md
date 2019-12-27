@@ -35,7 +35,12 @@ $ docker build -t superelectron/nightwatch:latest .
     gitlab-ci.yml
     Makefile
 ```
+- you can use the makefile commands, but you first need to create a ```make_env``` file.  
+- ```make_env``` can be empty, but it suggested to add in this:
 
+```bash
+VERSION = $$(date +%Y-%m-%d)
+```
 ---
 
 ### Modifying nginx.conf for your project
